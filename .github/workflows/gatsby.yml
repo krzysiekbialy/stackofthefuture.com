@@ -1,4 +1,4 @@
-name: Gatsby Publish Site
+name: Gatsby Publish Site Action
 on:
   push:
     branches:
