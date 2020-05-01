@@ -1,6 +1,8 @@
 name: Gatsby Publish Site
-
-on: push
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -9,4 +11,5 @@ jobs:
       - uses: actions/checkout@v1
       - uses: enriikke/gatsby-gh-pages-action@v2
         with:
+          deploy-branch: gh-pages
           access-token: ${{ secrets.ACCESS_TOKEN }}
