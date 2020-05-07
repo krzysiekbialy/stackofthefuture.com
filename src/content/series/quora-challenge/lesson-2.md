@@ -17,8 +17,9 @@ tags:
 
 In this lesson you will learn how to create components based on data you receive from GraphQL.
 
-###### Code used in this Lesson
+#### Code used in this Lesson
 
+##### css
 ```css
 .Query-questions{
     background: #eee;
@@ -58,6 +59,7 @@ In this lesson you will learn how to create components based on data you receive
 }
 ```
 
+##### js
 ```js
 dryad = {
     Author:{
@@ -66,8 +68,8 @@ dryad = {
 }
 ```
 
-
-```
+##### gql
+```graphql
 {
   questions{
     author{

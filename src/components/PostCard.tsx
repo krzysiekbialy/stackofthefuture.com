@@ -220,7 +220,7 @@ const PostCard: React.FC<PostCardProps> = ({ post, videosInSeries }) => {
         <Link className="post-card-content-link" css={PostCardContentLink} to={post.fields.slug}>
           <header className="post-card-header">
             {post.frontmatter.tags && (
-              <PostCardTags>{post.frontmatter.tags.map(t => `#${t}`).join(' ')}</PostCardTags>
+              <PostCardTags>{post.frontmatter.tags.map((t) => `#${t}`).join(' ')}</PostCardTags>
             )}
             <PostCardTitle>{post.frontmatter.title}</PostCardTitle>
           </header>

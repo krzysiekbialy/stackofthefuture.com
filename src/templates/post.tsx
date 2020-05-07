@@ -10,7 +10,6 @@ import Footer from '../components/Footer';
 import SiteNav from '../components/header/SiteNav';
 import PostContent from '../components/PostContent';
 import ReadNextCard from '../components/ReadNextCard';
-import Subscribe from '../components/subscribe/Subscribe';
 import Wrapper from '../components/Wrapper';
 import IndexLayout from '../layouts';
 import { colors } from '../styles/colors';
@@ -94,6 +93,19 @@ const PostVideo = styled.video`
   width: 100%;
 `;
 
+const FollowMe = styled.div`
+  background: ${colors.darkgrey};
+  font-size: 3rem;
+  padding: 8vw;
+  line-height: 1.5;
+`;
+
+const TwitterLink = styled.a`
+  color: ${colors.blue};
+  font-size: 3rem;
+  text-decoration: none;
+  font-weight: bold;
+`;
 interface PageTemplateProps {
   pathContext: {
     slug: string;
@@ -299,16 +311,16 @@ const PageTemplate: React.FC<PageTemplateProps> = (props) => {
                 <PostFullTitle>{post.frontmatter.title}</PostFullTitle>
               </PostFullHeader>
               <PostContent htmlAst={post.htmlAst} />
-
-              {/* The big email subscribe modal content */}
-              {config.showSubscribe && <Subscribe title={config.title} />}
             </article>
           </div>
         </main>
-
         {/* Links to Previous/Next posts */}
         <aside className="read-next" css={outer}>
           <div css={inner}>
+            <FollowMe>
+              If you wish to receive updates with next series{' '}
+              <TwitterLink href={config.twitter}>follow me on twitter</TwitterLink>
+            </FollowMe>
             <ReadNextFeed>
               {props.data.relatedPosts && (
                 <ReadNextCard

@@ -271,15 +271,15 @@ export const PostFullContent = styled.section`
   }
 
   h5 {
-    display: block;
-    margin: 0.5em 0;
-    padding: 1em 0 1.5em;
-    border: 0;
-    color: ${colors.blue};
-    font-family: Georgia, serif;
-    font-size: 3.2rem;
-    line-height: 1.35em;
-    text-align: center;
+    font-size: 1.2rem;
+    background-color: hsla(207, 95%, 15%, 1);
+    display: inline-block;
+    min-width: auto;
+    padding: 8px;
+    margin: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-style: italic;
   }
   @media (min-width: 1180px) {
     h5 {
@@ -288,7 +288,6 @@ export const PostFullContent = styled.section`
   }
   @media (max-width: 500px) {
     h5 {
-      padding: 0 0 0.5em;
       font-size: 2.2rem;
     }
   }
@@ -522,7 +521,9 @@ export const PostFullContent = styled.section`
 
   .gatsby-highlight {
     margin-bottom: 1.75rem;
-    border-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
     background: #011627;
     -webkit-overflow-scrolling: touch;
     overflow: auto;

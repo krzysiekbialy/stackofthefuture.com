@@ -18,28 +18,13 @@ tags:
 
 In this lesson you will learn how to create basic GraphQL schema. After that we will deploy a mock backend out of it and proceed to GraphiQL playground to learn GraphQL Query Language.
 
-###### Code used in this Lesson
+#### Code used in this Lesson
 
+Full schema is available [here](https://app.graphqleditor.com/stack-of-the-future/quora-challenge-lesson-01).
+
+
+##### Questions.gql
 ```graphql
-type Question{
-	content: String!
-	title: String!
-	author: Author!
-}
-
-type Query{
-	questions: [Question!]!
-}
-
-type Author{
-	username: String!
-	avatar: String
-}
-schema{
-	query: Query
-}
-```
-```
 {
   questions{
     author{
